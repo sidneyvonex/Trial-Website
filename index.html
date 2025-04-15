@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social Media Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="dashboard">
+    <div class="card">
+      <h3>Create and schedule content <span style="color:#7B61FF;">quicker.</span></h3>
+      <button  class="btn">Create Post →</button>
+    </div>
+
+    <div class="card purple">
+      <h2>Social Media <span style="color:#FFC43A;">10x</span> <em>Faster</em> with AI</h2>
+      <p>⭐⭐⭐⭐⭐<br> Over 4,000 5-star reviews</p>
+    </div>
+
+<div class="headerfile">
+    <h3>Schedule to Social Media</h3>
+    <div class="card lavender">
+        <div class="days">
+            <span class="day active-day">Mon</span>
+            <span class="day">Tue</span>
+            <span class="day">Wed</span>
+            <span class="day">Thu</span>
+          </div>
+      
+          <div class="most-active">Most Active</div>
+      <h3>Best Time to Post</h3>
+      <canvas id="barChart"></canvas>
+    </div>
+    
+    <div class="smalltext">
+        <small>Optimize post timings to publish content at the perfect time for your audience.</small>
+    </div>
+</div>
+
+    <div class="card yellow">
+      <h3>Write your content using AI.</h3>
+      <div class="chat-container">
+        <div class="message left">
+          <div class="avatar1"></div>
+          <div class="text">Give me a 5 tips to growth my follower on Instagram</div>
+        </div>
+      
+        <div class="message right">
+          <div class="avatar2"></div>
+          <div class="text">Certainly!Here are five tips to help you grow your instagram...</div>
+        </div>  
+      </div>
+      
+    </div>
+
+    <div class="card">
+        <p>@YourCo – 12K Followers</p>
+        <h3>Manage multiple accounts and platforms.</h3>
+      
+    </div>
+
+    <div class="card yellow">
+      <h2>Maintain a <br> consistent <br>posting <br> schedule.</h2>
+      <div class="calendar">
+        <p>August 2024 – Week 1 <br>      ✅   ✅   ✅    ✅</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>>56%  </h2>
+      <p> faster audience growth</p>
+      <div class="overlappingavatars">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card purple">
+      <h3>Follower Growth</h3>
+      <canvas id="lineChart"></canvas>
+      <p>Total Followers: 89,532 (+20%)</p>
+      <div>
+        <h2>Growth Followers with non-stop content</h2>
+    </div>
+    </div>
+    
+  </div>
+
+  <script>
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['12a', '3a', '6a', '9a', '12p'],
+        datasets: [{
+          label: 'Activity',
+          data: [20, 30, 60, 50, 40],
+          backgroundColor: '#7B61FF'
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+    new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+        datasets: [{
+          label: 'Followers',
+          data: [30000, 45000, 60000, 75000, 89532],
+          borderColor: '#FFC43A',
+          backgroundColor: 'rgba(255,196,58,0.2)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
