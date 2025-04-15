@@ -50,6 +50,8 @@ The website includes the following sections:
 
 * **CSS:** For styling the visual appearance and layout.
 
+* **JavaScript:** For dynamic elements and interactivity.
+
 ## Deployment
 
 The website is deployed to GitHub Pages.
